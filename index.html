@@ -1,0 +1,983 @@
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <title>Property Report</title>
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <!-- Favicons -->
+      <link href="assets/img/favicon.png" rel="icon">
+      <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+      <!-- Fonts -->
+      <link href="https://fonts.googleapis.com" rel="preconnect">
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+      <!-- Vendor CSS Files -->
+      <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+      <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+      <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+      <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+      <!-- Main CSS File -->
+      <link href="assets/css/main.css" rel="stylesheet">
+      <!-- =======================================================
+         * Template Name: BizLand
+         * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
+         * Updated: Dec 05 2024 with Bootstrap v5.3.3
+         * Author: BootstrapMade.com
+         * License: https://bootstrapmade.com/license/
+         ======================================================== -->
+      <style type="text/css">
+         .hudson-background { background: rgb(30, 59, 94, 1.0) !important; }
+         .theam-background {background: rgb(6, 64, 143, 1.0) !important; }
+         .hudson-color {color: rgb(6, 64, 143, 1.0) !important; }
+         .hudson-color-2 { color: rgb(30, 59, 94, 1.0) !important; }
+         .navbar-logo {
+         width: 30px; /* Adjust size as needed for a 'small' navbar */
+         height: 30px; /* Must be equal to width for a perfect circle */
+         margin-right: 30px;  }
+         .info-image-1 { background: url(assets/img/5-Orchard-Dr-Gardiner-NY-Building-Photo-1-LargeHighDefinition.jpeg) !important;  width: 100%;
+         background-repeat: no-repeat !important; /* Prevents the image from tiling */
+         background-position: left top !important; /* Positions the image to the left and centers it vertically */
+         background-size: 100% 50%  !important; /* The image will take up 50% of the div's width and 100% of its height */  }
+         .info-image-2 { background: url(assets/img/5-Orchard-Dr-Gardiner-NY-Building-Photo-2-LargeHighDefinition.jpeg) !important; background-size: cover; object-fit: cover;  }
+         .info-image-3 { background: url(assets/img/5-Orchard-Dr-Gardiner-NY-Building-Photo-3-LargeHighDefinition.jpeg) !important;  background-size: cover; object-fit: cover; }
+         .info-image-4 { background: url(assets/img/5-Orchard-Dr-Gardiner-NY-Building-Photo-4-LargeHighDefinition.jpeg) !important; background-size: cover;  }
+         .info-image-5 { background: url(assets/img/5-Orchard-Dr-Gardiner-NY-Building-Photo-5-LargeHighDefinition.jpeg) !important; background-size: cover;  }
+         .info-image-6 { background: url(assets/img/5-Orchard-Dr-Gardiner-NY-Building-Photo-71-LargeHighDefinition.jpeg) !important; background-size: cover;  }
+         .icon-box { position: absolute; top: 48%; /* 1. Specify a width to prevent stretching to full container width */
+         right: 10; /* Move the left edge to the center of the container */
+         left: 50%;
+         transform: translateX(-50%); /* Shift the div back by half of its own width */ background: rgb(6, 64, 143, 1.0) !important; padding-left: 1em; padding-right: 1em; padding-top:  .4em; padding-bottom: .4em;  
+         border-radius: 50%; } .icon-box i {font-size: 2em !important; color: white;}
+         .map-container {
+         display: none; /* Initially hide the iframe wrappers */
+         }
+         .modal-overlay {
+         position: fixed !important;
+         top: 0 !important;
+         left: 0 !important;
+         width: 100% !important;
+         height: 100% !important;
+         display: flex !important;
+         justify-content: center !important; /* Horizontally center */
+         align-items: center !important; /* Vertically center */
+         overflow-y: auto !important; /* Allows scrolling if content is too long */
+         z-index: 1000 !important; /* Ensure it's above other content */
+         }
+         .modal-content {
+         /* Add max-height and overflow for internal scrolling if needed */
+         max-height: 90vh !important; /* Example: 90% of viewport height */
+         overflow-y: auto !important;
+         /* Other styling like background, padding, width, etc. */
+         }
+         .card-pargh { font-size: 18px !important; }
+         .description-area {
+         /* Optional: Add some padding and a subtle background for visual separation */
+         padding: 19px;
+         background-color: #f9f9f9;
+         border: 1px solid #ddd;
+         margin: 19px 0;
+         }
+         .description-area h2 {
+         /* Align the H2 heading to the left */
+         text-align: left;
+         /* Custom font color for the H2 */
+         color: #333333; /* Dark gray for good contrast */
+         /* Optional: Add some bottom margin to space it from the paragraph */
+         margin-bottom: 15px;
+         }
+         .description-area p {
+         /* Align the paragraphs to the left (default, but good practice to be explicit) */
+         text-align: left;
+         /* Set a specific line height for improved readability */
+         /* A unitless value (like 1.6) is often recommended as it's relative to the font size */
+         line-height: 1.6;
+         /* Custom font color for the paragraphs */
+         color: #666666; /* Medium gray for body text */
+         /* Optional: Add some margin between paragraphs */
+         margin-bottom: 10px; font-size: 18px;
+         }
+      </style>
+   </head>
+   <body class="index-page" data-aos-easing="ease-in-out" data-aos-duration="600" data-aos-delay="0" style="">
+      <header id="header" class="header sticky-top" style="">
+         <div class="topbar d-flex align-items-center theam-background">
+            <div class="container d-flex justify-content-center justify-content-md-between">
+               <div class="contact-info d-flex align-items-center">
+                  <a class="navbar-brand" href="#">
+                     <!-- Your circular logo image -->
+                     <img src="assets/img/hudson-logo.png" alt="Logo" class="rounded-circle navbar-logo">
+                  </a>
+                  <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">sam@hudsoncommercial.com</a></i>
+                  <i class="bi bi-phone d-flex align-items-center ms-4"><span> 845 454-1444</span></i> 
+               </div>
+               <div class="social-links d-none d-md-flex align-items-center">
+                  <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                  <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+               </div>
+            </div>
+         </div>
+         <!-- End Top Bar -->
+         <div class="branding d-flex align-items-cente ">
+            <div class="container position-relative d-flex align-items-center justify-content-between ">
+               <a href="index.html" class="logo d-flex align-items-center">
+                  <!-- Uncomment the line below if you also wish to use an image logo -->
+                  <!-- <img src="assets/img/logo.png" alt=""> -->
+                  <h1 class="sitename">Hudson Commercial Real Estate</h1>
+               </a>
+               <nav id="navmenu" class="navmenu">
+                  <ul>
+                     <li><a href="#hero" class="active">Home</a></li>
+                     <li><a href="#about" class="">About</a></li>
+                     <li><a href="#services" class="">Properties</a></li>
+                     <li><a href="#contact">Broker Info</a></li>
+                     <li><a href="https://hudsoncommercial.com/contact-us/">Contact</a></li>
+                  </ul>
+                  <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+               </nav>
+            </div>
+         </div>
+      </header>
+      <div class="map-container">
+         <div class="iframe-wrapper iframe-wrapper-1" id="iframe-wrapper-1"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.1870969831466!2d-73.91137085!3d41.70460755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89dd3e400e9f55cb%3A0x87702b2f8b1eff83!2s211%20Cottage%20St%2C%20Poughkeepsie%2C%20NY%2012601!5e1!3m2!1sen!2sus!4v1775674823720!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe></div>
+         <div class="iframe-wrapper iframe-wrapper-2" id="iframe-wrapper-2"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.000473585792!2d-73.869902!3d41.687515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89dd3fa36d5b34f7%3A0x848980ee70659f3c!2s59-71%20Page%20Park%20Dr%2C%20Poughkeepsie%2C%20NY%2012603!5e1!3m2!1sen!2sus!4v1775678125288!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe></div>
+         <div class="iframe-wrapper iframe-wrapper-3" id="iframe-wrapper-3"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3063.14643917421!2d-73.861043!3d41.64239149999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89dd3f4ba29a5469%3A0xeea9fef266dafb98!2s141%20Daley%20Rd%2C%20Poughkeepsie%2C%20NY%2012603!5e1!3m2!1sen!2sus!4v1775676896110!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe></div>
+         <div class="iframe-wrapper iframe-wrapper-4" id="iframe-wrapper-4"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3063.5856989203385!2d-73.92043009999999!3d41.633150199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89dd3943888a9257%3A0x2d242b1c44c6fe84!2s641%20Sheafe%20Rd%2C%20Poughkeepsie%2C%20NY%2012601!5e1!3m2!1sen!2sus!4v1775679401184!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe></div>
+         <div class="iframe-wrapper iframe-wrapper-5" id="iframe-wrapper-5"></div>
+         <div class="iframe-wrapper iframe-wrapper-6" id="iframe-wrapper-6"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.0861478057527!2d-73.84411759999999!3d41.7487311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89dd152b63036137%3A0xfafc36930ddccd22!2s199%20W%20Rd%2C%20Pleasant%20Valley%2C%20NY%2012569!5e1!3m2!1sen!2sus!4v1775679539633!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe></div>
+         <div class="iframe-wrapper iframe-wrapper-7" id="iframe-wrapper-7"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3059.9433695615894!2d-73.9117478!3d41.7097282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89dd3e3e07d4f131%3A0x4b4c34282e385823!2s188%20Smith%20St%2C%20Poughkeepsie%2C%20NY%2012601!5e1!3m2!1sen!2sus!4v1775747627592!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe></div>
+      </div>
+      <div class="images-container">
+         <ul class="image-carousel-ul-1" style="display: none;">
+            <li>https://ahprd1cdn.csgpimgs.com/i2/NuUvurIJ-VdqM_gkvAG-KY5hFElKwYYz94vBrfq9hys/116/image.jpg</li>
+            <li>https://ahprd1cdn.csgpimgs.com/i2/xMiUA_UReYCeS0p5wuU1pAgfZwQDkhMu0FxPTjTZ210/115/image.jpg</li>
+            <li>https://ahprd1cdn.csgpimgs.com/i2/6PCxcMmse7Z_lY0U5V_CAw1Zz7S01igSC4N4bNVWdPg/115/image.jpg</li>
+         </ul>
+         <ul class="image-carousel-ul-2" style="display: none;">
+            <li>https://ahprd1cdn.csgpimgs.com/i2/sRUMAVTJGWnsOvuWjMdIC75r_i6dR8Ukw2QbmXzZLYM/116/image.jpg</li>
+            <li>https://ahprd1cdn.csgpimgs.com/i2/fqxgM85B303MPTmJGvmmfTelv9K7gBVQHZ4z7GUh2WQ/116/image.jpg</li>
+            <li>https://ahprd1cdn.csgpimgs.com/i2/L8qHOyGFGd97J11oWTTYLD3X0ZVKF48drXFomi6f7Mo/116/image.jpg</li>
+         </ul>
+         <ul class="image-carousel-ul-3" style="display: none;">
+            <li>https://ahprd1cdn.csgpimgs.com/i2/YgAiqptpr4pjtHTENX58vfKWBln6x2o9dJBPz8ZYHjI/116/image.jpg</li>
+            <li>https://ahprd1cdn.csgpimgs.com/i2/DjPdha6n4rSc9tHDyuaZBM04WUWZFbtBk7QdCmOiJ-4/116/image.jpg</li>
+            <li>https://ahprd1cdn.csgpimgs.com/i2/v_Cjs3R5kFL1kP55_XYhRzx1KPRqh-X9a6ufdOJ5GX0/116/image.jpg</li>
+         </ul>
+         <ul class="image-carousel-ul-4" style="display: none;">
+            <li>https://ahprd1cdn.csgpimgs.com/i2/CeH___U27_6OOO7dNR3dTCDh5ZsmYHaEdU9Uo0lATpQ/116/image.jpg</li>
+            <li>https://ahprd1cdn.csgpimgs.com/i2/ImwI_1AhLgUgXvNW4Z9T6J8dgHGnA-cSgDVrffLQvPA/116/image.jpg</li>
+            <li>https://ahprd1cdn.csgpimgs.com/i2/SNzw0llweQvYObghaAS8Smqyy3SYS7PFJlpmCrlKXxA/116/image.jpg</li>
+         </ul>
+         <ul class="image-carousel-ul-6" style="display: none;">
+            <li>https://ahprd1cdn.csgpimgs.com/i2/rIwuqyXby-SIJmEpJfGdt4RLEw8y11_Y4O1RfsCxRZM/116/image.jpg</li>
+            <li>https://ahprd1cdn.csgpimgs.com/i2/Q6kRyvmHsiBzavv6RWt7I8e3FkKjJXrkjgzHj17KbOg/116/image.jpg</li>
+            <li>https://ahprd1cdn.csgpimgs.com/i2/OcvTzRtaAtm4kW-PC4L4R8Q6pW7H0JbILIBCVP5Zahc/116/image.jpg</li>
+         </ul>
+         <ul class="image-carousel-ul-7" style="display: none;">
+            <li>https://ahprd1cdn.csgpimgs.com/i2/ZIwTBERGWwepySC6AuTWBY2Ad0F1JDrnmL4-8EE7mVM/116/image.jpg</li>
+            <li>https://ahprd1cdn.csgpimgs.com/i2/6bi3Af6H5d0diRNvDKYJHGyUMtW8oQYz5fZuhV8tDTE/116/image.jpg</li>
+            <li>https://ahprd1cdn.csgpimgs.com/i2/NECBscnmFGNXvLIsRT6YMB65DFAOrVWeDj1yxosEfBQ/116/image.jpg</li>
+         </ul>
+         <main class="main">
+            <!-- Hero Section -->
+            <section id="hero" class="hero section light-background">
+               <div class="container">
+                  <div class="row gy-4">
+                     <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center aos-init aos-animate" data-aos="zoom-out">
+                        <h1> <span class="text-white">Space Report</span></h1>
+                        <p class="text-white">Industrial Spaces For Lease</p>
+                        <div class="d-flex">
+                           <a href="#about" class="btn-get-started theam-background">Get Started</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- /Hero Section -->
+            <!-- Featured Services Section -->
+            <section id="featured-services" class="featured-services section">
+               <div class="container">
+                  <div class="row gy-4">
+                     <div class="col-xl-3 col-md-6 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-item  position-relative">
+                           <div class="icon"><i class="bi bi-building"></i></div>
+                           <h4><a href="" class="stretched-link">Amount Of Spaces For Leaes</a></h4>
+                           <p>6 Spaces</p>
+                        </div>
+                     </div>
+                     <!-- End Service Item -->
+                     <div class="col-xl-3 col-md-6 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-item  position-relative">
+                           <div class="icon"><i class="bi bi-map"></i></div>
+                           <h4><a href="" class="stretched-link">The County where the space are</a></h4>
+                           <p>Dutchess County</p>
+                        </div>
+                     </div>
+                     <!-- End Service Item -->
+                     <div class="col-xl-3 col-md-6 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-item  position-relative">
+                           <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
+                           <h4><a href="" class="stretched-link">Smallest Space Available 
+                              </a>
+                           </h4>
+                           <p>2,500 sq. ft.</p>
+                        </div>
+                     </div>
+                     <!-- End Service Item -->
+                     <div class="col-xl-3 col-md-6 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+                        <div class="service-item  position-relative">
+                           <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
+                           <h4><a href="" class="stretched-link">Largest Space Available
+                              </a>
+                           </h4>
+                           <p>5,000 sq. ft.</p>
+                        </div>
+                     </div>
+                     <!-- End Service Item -->
+                  </div>
+               </div>
+            </section>
+            <!-- /Featured Services Section -->
+            <!-- About Section -->
+            <section id="about" class="about section light-background">
+               <!-- Section Title -->
+               <div class="container section-title aos-init aos-animate" data-aos="fade-up">
+                  <h2>About</h2>
+                  <p><span>Find Out More</span> <span class="description-title"> About What's For Lease</span></p>
+               </div>
+               <!-- End Section Title -->
+               <div class="container">
+                  <div class="row gy-3">
+                     <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://ahprd1cdn.csgpimgs.com/i2/t_MPcFRcac7rGZuu7KFJRXldT0KovMXsyDG348RxuHg/116/image.jpg" alt="" class="img-fluid">
+                        <img src="https://ahprd1cdn.csgpimgs.com/i2/ZqhGUkuxzmQEkLInpJs2rgpmDDu73T2DAAThCFLs9tw/116/image.jpg " alt="" class="img-fluid mt-3"> 
+                     </div>
+                     <div class="col-lg-6 d-flex flex-column justify-content-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                        <div class="about-content ps-0 ps-lg-3">
+                           <h3>Six industrial spaces are available for lease in Dutchess County.</h3>
+                           <p class="fst-italic">
+                              These properties offer flexible, centrally located space ranging from approximately 2,500 to over 5,000 square feet, suitable for manufacturing, warehousing, or distribution, with convenient access to major transportation routes, including Rt. 84/87 and the Taconic. 
+                           </p>
+                           <ul>
+                              <li>
+                                 <i class="bi bi-building"></i>
+                                 <div>
+                                    <h4>210-211 Cottage St, Poughkeepsie, NY  </h4>
+                                    <p>The building has a space that is 4,262 SF.</p>
+                                 </div>
+                              </li>
+                              <li>
+                                 <i class="bi bi-building"></i>
+                                 <div>
+                                    <h4>188 Smith St Poughkeepsie, NY</h4>
+                                    <p>The building has 5,166 SF for lease.</p>
+                                 </div>
+                              </li>
+                              <li>
+                                 <i class="bi bi-building"></i>
+                                 <div>
+                                    <h4>199 West Rd Pleasant Valley, NY </h4>
+                                    <p> 
+                                       The building has 5,000 SF for lease.
+                                    </p>
+                                 </div>
+                              </li>
+                              <li>
+                                 <i class="bi bi-building"></i>
+                                 <div>
+                                    <h4>141 Daley Rd, Poughkeepsie, NY </h4>
+                                    <p> 
+                                       The building has 2,500 SF for lease.
+                                    </p>
+                                 </div>
+                              </li>
+                              <li>
+                                 <i class="bi bi-building"></i>
+                                 <div>
+                                    <h4>641 Sheafe Rd, Poughkeepsie, NY </h4>
+                                    <p> 
+                                       The building has 2,500 SF for lease.
+                                    </p>
+                                 </div>
+                              </li>
+                              <li>
+                                 <i class="bi bi-building"></i>
+                                 <div>
+                                    <h4>59-71 Page Park Dr, Poughkeepsie, NY </h4>
+                                    <p> 
+                                       The building has 2,300  SF for lease.
+                                    </p>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+      </div>
+      </div>
+      <!-- Services Section -->
+      <section id="services" class="services section">
+      <!-- Section Title -->
+      <div class="container section-title mb-4 card-container aos-init aos-animate" data-aos="fade-up" id="property-cards-container">
+      <h2>Property info</h2>
+      <p class="mb-4"><span>Check Out The</span> <span class="description-title">Spaces Facts</span></p>
+      <div class="row mt-4 property-row">
+      <div class="col-lg-4 col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="500">
+      <div class="card h-100 shadow-sm card-1" id="card-1">
+      <!-- Property Image -->
+      <img src="https://ahprd1cdn.csgpimgs.com/i2/NuUvurIJ-VdqM_gkvAG-KY5hFElKwYYz94vBrfq9hys/116/image.jpg" class="card-img-top" alt="Property Alt Text">
+      <div class="">
+      <i class=""></i>       
+      </div>
+      <!-- Card Body Content -->
+      <div class="card-body">
+      <!-- Price and Property Type -->
+      <div class="d-flex justify-content-between align-items-center mb-2">
+      <h5 class="card-title mb-0">$3,407 Per/Month</h5>
+      <span class="badge hudson-background text-white">For Lease</span>
+      </div>
+      <!-- Property Title/Name -->
+      <h6 class="card-subtitle mb-2 text-muted">210-211 Cottage St</h6>
+      <!-- Location -->
+      <p class="card-text card-pargh">
+      <i class="fas fa-map-marker-alt"></i> 210-211 Cottage St Poughkeepsie, NY 12601
+      </p>
+      <hr>
+      <!-- Key Specs -->
+      <ul class="list-group list-group-flush">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+      <small>Sq. Footage:</small>
+      <strong> 2,302 - 4,262 SF </strong>  
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+      <small>Property Type:</small>
+      <strong>Commercial Warehouse</strong>
+      </li>
+      </ul>
+      </div>
+      <!-- Card Footer / Action Button -->
+      <div class="card-footer">
+      <a href="#" class="btn theam-background text-white w-100" data-bs-toggle="modal" data-bs-target="#myLargeModal" data-target="#myLargeModal" data-street-address="210-211 Cottage St Poughkeepsie, NY 12601" data-building-name="210-211 Cottage St" data-property-type="Warehouse" data-price="$3,407 per month" data-description="The property is 210-211 Cottage St, a Warehouse building located in Fishkill Submarket. The buildings location is 210-211 Cottage St Poughkeepsie, NY 12601. This is a Warehouse building that sits on a 3.23 AC Lot and was built in 1968. What is available to lease at this location is 2,302 SF. The max amount of space you can lease here would be 4,262 SF. The onwers are asking for rent $3,407 - 
+         $8,908 Per Month" data-year-built="1968" data-zoning="LI" data-square-feet="2,302 SF" data-smallest-space="540 SF" data-lease-type="Modified Gross" data-drive-ins="1 tot./12' w x 12' h" data-land-acres="3.23 AC" data-property-county="Fishkill Submarket" data-property-map="iframe-wrapper-1" data-modal-images="image-carousel-ul-1"> View Property</a>
+      </div>
+      </div>
+      </div>
+      <!-- End Service Item -->
+      <div class="col-lg-4 col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="500">
+      <div class="card h-100 shadow-sm card-2" id="card-2">
+      <!-- Property Image -->
+      <img src="https://ahprd1cdn.csgpimgs.com/i2/sRUMAVTJGWnsOvuWjMdIC75r_i6dR8Ukw2QbmXzZLYM/116/image.jpg" class="card-img-top" alt="Property Alt Text">
+      <div class="">
+      <i class=""></i>       
+      </div>
+      <!-- Card Body Content -->
+      <div class="card-body">
+      <!-- Price and Property Type -->
+      <div class="d-flex justify-content-between align-items-center mb-2">
+      <h5 class="card-title mb-0">$3,067 Per/Month</h5>
+      <span class="badge hudson-background text-white">For Lease</span>
+      </div>
+      <!-- Property Title/Name -->
+      <h6 class="card-subtitle mb-2 text-muted">59-71 Page Park Dr</h6>
+      <!-- Location -->
+      <p class="card-text card-pargh">
+      <i class="fas fa-map-marker-alt"></i> 59-71 Page Park Dr Poughkeepsie, NY 12603
+      </p>
+      <hr>
+      <!-- Key Specs -->
+      <ul class="list-group list-group-flush">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+      <small>Sq. Footage:</small>
+      <strong>2,300 SF </strong>  
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+      <small>Property Type:</small>
+      <strong>Commercial Warehouse</strong>
+      </li>
+      </ul>
+      </div>
+      <!-- Card Footer / Action Button -->
+      <div class="card-footer">
+      <a href="#" class="btn theam-background text-white w-100" data-bs-toggle="modal" data-bs-target="#myLargeModal" data-target="#myLargeModal" data-street-address="59-71 Page Park Dr Poughkeepsie, NY 12603" data-building-name="59-71 Page Park Dr" data-property-type="Warehouse" data-price="$3,407 per month" data-description="The property is 59-71 Page Park Dr, a Warehouse building located in Fishkill Submarket. The buildings location is 59-71 Page Park Dr Poughkeepsie, NY 12603. This is a Warehouse building that sits on a 2.2 AC Lot and was built in 1962. What is available to lease at this location is 2,300 SF. The max amount of space you can lease here would be 6,236 SF. The onwers are asking for rent $3,067 per month" data-year-built="1962" data-zoning="IH" data-square-feet="2,300 SF" data-smallest-space="2,260 SF" data-lease-type="Modified Gross" data-drive-ins="2 tot." data-land-acres="2.20 AC" data-property-county="Fishkill Submarket" data-property-map="iframe-wrapper-2" data-modal-images="image-carousel-ul-2"> View Property</a>
+      </div>
+      </div>
+      </div>
+      <!-- End Service Item -->
+      <div class="col-lg-4 col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="500">
+      <div class="card h-100 shadow-sm card-3" id="card-3">
+      <!-- Property Image -->
+      <img src="https://ahprd1cdn.csgpimgs.com/i2/YgAiqptpr4pjtHTENX58vfKWBln6x2o9dJBPz8ZYHjI/116/image.jpg" class="card-img-top" alt="Property Alt Text">
+      <div class="">
+      <i class=""></i>       
+      </div>
+      <!-- Card Body Content -->
+      <div class="card-body">
+      <!-- Price and Property Type -->
+      <div class="d-flex justify-content-between align-items-center mb-2">
+      <h5 class="card-title mb-0">$4,500 Per/Month</h5>
+      <span class="badge hudson-background text-white">For Lease</span>
+      </div>
+      <!-- Property Title/Name -->
+      <h6 class="card-subtitle mb-2 text-muted">141 Daley Rd</h6>
+      <!-- Location -->
+      <p class="card-text card-pargh">
+      <i class="fas fa-map-marker-alt"></i> 141 Daley Rd Poughkeepsie, NY 12603
+      </p>
+      <hr>
+      <!-- Key Specs -->
+      <ul class="list-group list-group-flush">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+      <small>Sq. Footage:</small>
+      <strong>2,500 SF </strong>  
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+      <small>Property Type:</small>
+      <strong>Commercial Warehouse</strong>
+      </li>
+      </ul>
+      </div>
+      <!-- Card Footer / Action Button -->
+      <div class="card-footer">
+      <a href="#" class="btn theam-background text-white w-100" data-bs-toggle="modal" data-bs-target="#myLargeModal" data-target="#myLargeModal" data-street-address="141 Daley Rd Poughkeepsie, NY 12603" data-building-name="141 Daley Rd" data-property-type="Warehouse" data-price="$4,500 per month" data-description="The property is 141 Daley Rd, a Warehouse building located in Fishkill Submarket. The buildings location is 141 Daley Rd Poughkeepsie, NY 12603. This is a Warehouse building that sits on a 1.35 AC Lot and was built in 1980. What is available to lease at this location is 2,500 SF. The max amount of space you can lease here would be 2,500 SF. The onwers are asking for rent $4,500 Per Month" data-year-built="1980" data-zoning="C1" data-square-feet="2,500 SF" data-smallest-space="2,500 SF" data-lease-type="TBD" data-drive-ins="None" data-land-acres="1.35 AC" data-property-county="Fishkill Submarket" data-property-map="iframe-wrapper-3" data-modal-images="image-carousel-ul-3"> View Property</a>
+      </div>
+      </div>
+      </div>
+      <!-- End Service Item -->
+      </div>
+      <div class="row mt-4 property-row">
+      <div class="col-lg-4 col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="500">
+      <div class="card h-100 shadow-sm card-4" id="card-4">
+      <!-- Property Image -->
+      <img src="https://ahprd1cdn.csgpimgs.com/i2/CeH___U27_6OOO7dNR3dTCDh5ZsmYHaEdU9Uo0lATpQ/116/image.jpg" class="card-img-top" alt="Property Alt Text">
+      <div class="">
+      <i class=""></i>       
+      </div>
+      <!-- Card Body Content -->
+      <div class="card-body">
+      <!-- Price and Property Type -->
+      <div class="d-flex justify-content-between align-items-center mb-2">
+      <h5 class="card-title mb-0">$16.00/SF/YR</h5>
+      <span class="badge hudson-background text-white">For Lease</span>
+      </div>
+      <!-- Property Title/Name -->
+      <h6 class="card-subtitle mb-2 text-muted">641 Sheafe Rd</h6>
+      <!-- Location -->
+      <p class="card-text card-pargh">
+      <i class="fas fa-map-marker-alt"></i> 641 Sheafe Rd Poughkeepsie, NY 12601
+      </p>
+      <hr>
+      <!-- Key Specs -->
+      <ul class="list-group list-group-flush">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+      <small>Sq. Footage:</small>
+      <strong>2,500 SF </strong>  
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+      <small>Property Type:</small>
+      <strong>Commercial Warehouse</strong>
+      </li>
+      </ul>
+      </div>
+      <!-- Card Footer / Action Button -->
+      <div class="card-footer">
+      <a href="#" class="btn theam-background text-white w-100" data-bs-toggle="modal" data-bs-target="#myLargeModal" data-target="#myLargeModal" data-street-address="641 Sheafe Rd Poughkeepsie, NY 12601" data-building-name="641 Sheafe Rd" data-property-type="Warehouse" data-price="$16.00 per sq. ft." data-description="The property is 641 Sheafe Rd, a Warehouse building located in Fishkill Submarket. The buildings location is 641 Sheafe Rd Poughkeepsie, NY 12601. This is a Warehouse building that sits on a 5.44 AC Lot and was built in 1980. What is available to lease at this location is 2,500 SF. The max amount of space you can lease here would be 2,500 SF. The onwers are asking for rent $16.00 per sq. ft." data-year-built="1980" data-zoning="OR" data-square-feet="2,500 SF" data-smallest-space="2,500 SF" data-lease-type="641 Sheafe Rd" data-drive-ins="5 tot./8' w x 10' h" data-land-acres="5.44 AC" data-property-county="Fishkill Submarket" data-property-map="iframe-wrapper-4" data-modal-images="image-carousel-ul-4"> View Property</a>
+      </div>
+      </div>
+      </div>
+      <!-- End Service Item -->
+      <!-- End Service Item -->
+      <div class="col-lg-4 col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="500">
+      <div class="card h-100 shadow-sm card-6" id="card-6">
+      <!-- Property Image -->
+      <img src="https://ahprd1cdn.csgpimgs.com/i2/rIwuqyXby-SIJmEpJfGdt4RLEw8y11_Y4O1RfsCxRZM/116/image.jpg" class="card-img-top" alt="Property Alt Text">
+      <div class="">
+      <i class=""></i>       
+      </div>
+      <!-- Card Body Content -->
+      <div class="card-body">
+      <!-- Price and Property Type -->
+      <div class="d-flex justify-content-between align-items-center mb-2">
+      <h5 class="card-title mb-0">$8,333 Per/Month </h5>
+      <span class="badge hudson-background text-white">For Lease</span>
+      </div>
+      <!-- Property Title/Name -->
+      <h6 class="card-subtitle mb-2 text-muted">199 West Rd - Hudson Valley Business Center</h6>
+      <!-- Location -->
+      <p class="card-text card-pargh">
+      <i class="fas fa-map-marker-alt"></i> 199 West Rd Pleasant Valley, NY 12569
+      </p>
+      <hr>
+      <!-- Key Specs -->
+      <ul class="list-group list-group-flush">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+      <small>Sq. Footage:</small>
+      <strong>5,000 SF </strong>  
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+      <small>Property Type:</small>
+      <strong>Commercial Warehouse</strong>
+      </li>
+      </ul>
+      </div>
+      <!-- Card Footer / Action Button -->
+      <div class="card-footer">
+      <a href="#" class="btn theam-background text-white w-100" data-bs-toggle="modal" data-bs-target="#myLargeModal" data-target="#myLargeModal" data-street-address="199 West Rd - Hudson Valley Business Center Pleasant Valley, NY 12569" data-building-name="199 West Rd - Hudson Valley Business Center" data-property-type="Warehouse" data-price="$8,333 per month" data-description="The property is 199 West Rd - Hudson Valley Business Center, a Warehouse building located in Fishkill Submarket. The buildings location is 199 West Rd - Hudson Valley Business Center Pleasant Valley, NY 12569. This is a Warehouse building that sits on a 4.99 AC Lot and was built in 1979 / 2007. What is available to lease at this location is 5,000 SF. The max amount of space you can lease here would be 10,000 SF. The onwers are asking for rent $8,333 per month." data-year-built="5,000 - 10,000" data-zoning="OI" data-square-feet="5,000 SF" data-smallest-space="5,000 SF" data-lease-type="Triple Net" data-drive-ins="None" data-land-acres="4.99 AC" data-property-county="Fishkill Submarket" data-property-map="iframe-wrapper-6" data-modal-images="image-carousel-ul-6"> View Property</a>
+      </div>
+      </div>
+      </div>
+      <!-- End Service Item -->
+      <div class="col-lg-4 col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="500">
+      <div class="card h-100 shadow-sm card-7" id="card-7">
+      <!-- Property Image -->
+      <img src="https://ahprd1cdn.csgpimgs.com/i2/ZIwTBERGWwepySC6AuTWBY2Ad0F1JDrnmL4-8EE7mVM/116/image.jpg" class="card-img-top" alt="Property Alt Text">
+      <div class="">
+      <i class=""></i>       
+      </div>
+      <!-- Card Body Content -->
+      <div class="card-body">
+      <!-- Price and Property Type -->
+      <div class="d-flex justify-content-between align-items-center mb-2">
+      <h5 class="card-title mb-0">$23.00 /SF/YR</h5>
+      <span class="badge hudson-background text-white">For Lease</span>
+      </div>      
+      <!-- Property Title/Name -->
+      <h6 class="card-subtitle mb-2 text-muted">188 Smith St</h6>
+      <!-- Location -->
+      <p class="card-text card-pargh">
+      <i class="fas fa-map-marker-alt"></i> 188 Smith St Poughkeepsie, NY 12601
+      </p>
+      <hr>
+      <!-- Key Specs -->
+      <ul class="list-group list-group-flush">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+      <small>Sq. Footage:</small>
+      <strong>5,166 SF </strong>  
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+      <small>Property Type:</small>
+      <strong>Commercial Service</strong>
+      </li>
+      </ul>
+      </div>
+      <!-- Card Footer / Action Button -->
+      <div class="card-footer">
+      <a href="#" class="btn theam-background text-white w-100" data-bs-toggle="modal" data-bs-target="#myLargeModal" data-target="#myLargeModal" data-street-address="188 Smith St Poughkeepsie, NY 12601" data-building-name="188 Smith St" data-property-type="Service" data-price="$9,902 per month" data-description="The property is 188 Smith St, a Service building located in Fishkill Submarket. The buildings location is 188 Smith St Poughkeepsie, NY 12601. This is a Service building that sits on a 0.57 AC Lot and was built in 1910. What is available to lease at this location is 5,166 SF. The max amount of space you can lease here would be 5,166 SF. The onwers are asking for rent $9,902 per month." data-year-built="1910" data-zoning="C-1" data-square-feet="5,166 SF" data-smallest-space="5,166 SF" data-lease-type="Plus Utilities" data-drive-ins="4 tot." data-land-acres="0.57 AC" data-property-county="Fishkill Submarket" data-property-map="iframe-wrapper-7" data-modal-images="image-carousel-ul-7"> View Property</a>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      <!-- End Section Title -->
+      <div class="container mt-4">
+      <div class="row gy-4">
+      </div>
+      </div>
+      </section>
+      <!-- Contact Section -->
+      <section id="contact" class="contact section">
+      <!-- Section Title -->
+      <div class="container section-title aos-init" data-aos="fade-up">
+      <h2>Contact</h2>
+      <p><span>Want To See The Space</span> <span class="description-title">Contact Us</span></p>
+      </div>
+      <!-- End Section Title -->
+      <div class="container aos-init" data-aos="fade-up" data-aos-delay="100">
+      <div class="row gy-4">
+      <div class="col-lg-5">
+      <div class="info-wrap">
+      <div class="info-item d-flex aos-init" data-aos="fade-up" data-aos-delay="200">
+      <i class="bi bi-geo-alt flex-shrink-0"></i>
+      <div>
+      <h3>Address</h3>
+      <p>2678 South Rd Ste 103, Poughkeepsie, NY 12601</p>
+      </div>
+      </div>
+      <!-- End Info Item -->
+      <div class="info-item d-flex aos-init" data-aos="fade-up" data-aos-delay="300">
+      <i class="bi bi-telephone flex-shrink-0"></i>
+      <div>
+      <h3>Call Us</h3>
+      <p>+1 845-454-1444</p>
+      </div>
+      </div>
+      <!-- End Info Item -->
+      <div class="info-item d-flex aos-init" data-aos="fade-up" data-aos-delay="400">
+      <i class="bi bi-envelope flex-shrink-0"></i>
+      <div>
+      <h3>Email Us</h3>
+      <p>sam@hudsoncommercial.com</p>
+      </div>
+      </div>
+      <!-- End Info Item -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.73301709935!2d-73.9275804!3d41.6721162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89dd3e99735bc1b1%3A0x9f001a5f7d3500d7!2s2678%20South%20Rd%20%23%20202%2C%20Poughkeepsie%2C%20NY%2012601!5e1!3m2!1sen!2sus!4v1775686737314!5m2!1sen!2sus"  style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+      </div>
+      </div>
+      <div class="col-lg-7">
+      <form id="emailForm">
+      <div class="row">
+      <div class="col-md-6 mb-3"> <label for="name-field" class="pb-2">Your Name</label>  <input type="text" id="name" name="name" class="form-control" required></div>   <div class="col-md-6 mb-3">  <label for="email-field" class="pb-2">Your Email</label>
+      <input type="email" class="form-control" name="email" id="email-field" > </div> </div>
+      <div class="col-md-12 "><label for="subject-field" class="pb-2">Subject</label> <input type="text" id="subject" name="subject" class="form-control" required></div> 
+      <label for="message-field" class="pb-2 mt-3">Message</label>
+      <textarea id="message" name="message" class="form-control" rows="10" required></textarea><br><br>
+      <div class="col-md-12 text-center">   <button class="btn theam-background text-white text-center btn-lg" type="button" onclick="sendEmail()">Create Email</button> </div>
+      </form>
+      </div>
+      <!-- End Contact Form -->
+      </div>
+      </div>
+      </section>
+      <!-- /Contact Section -->
+      </main>
+      <footer id="footer" class="footer">
+         <div class="container footer-top">
+            <div class="row gy-4">
+               <div class="col-lg-4 col-md-6 footer-about">
+                  <a href="index.html" class="d-flex align-items-center">
+                  <span class="sitename">Hudson Commercial Real Estate Corp.</span>
+                  </a>
+                  <div class="footer-contact pt-3">
+                     <p>2678 South Rd Ste 103, </p>
+                     <p>Poughkeepsie, NY 12601</p>
+                     <p class="mt-3"><strong>Phone:</strong> <span>+1 845-454-1444</span></p>
+                     <p><strong>Email:</strong> <span>sam@hudsoncommercial.com</span></p>
+                  </div>
+               </div>
+               <div class="col-lg-2 col-md-3 footer-links">
+                  <h4>Useful Links</h4>
+                  <ul>
+                     <li><a href="https://hudsoncommercial.com/frontpage/"><i class="bi bi-chevron-right"></i> Home</a></li>
+                     <li><a href="https://hudsoncommercial.com/"><i class="bi bi-chevron-right"></i> About </a></li>
+                     <li><a href="https://hudsoncommercial.com/management/"><i class="bi bi-chevron-right"></i> Management</a></li>
+                     <li><a href="https://hudsoncommercial.com/"><i class="bi bi-chevron-right"></i> Properties</a></li>
+                     <li><a href="https://hudsoncommercial.com/contact-us/"><i class="bi bi-chevron-right"></i> Contact</a></li>
+                  </ul>
+               </div>
+               <div class="col-lg-2 col-md-3 footer-links">
+                  <h4>Our Services</h4>
+                  <ul>
+                     <li><i class="bi bi-chevron-right"></i> <a href="#">Building Management</a></li>
+                     <li><i class="bi bi-chevron-right"></i> <a href="#">Construction Management</a></li>
+                     <li><i class="bi bi-chevron-right"></i> <a href="#">Real Estate Development</a></li>
+                     <li><i class="bi bi-chevron-right"></i> <a href="#">Real Estate Consulting</a></li>
+                     <li><i class="bi bi-chevron-right"></i> <a href="#">Real Estate Sales</a></li>
+                  </ul>
+               </div>
+               <div class="col-lg-4 col-md-12">
+                  <h4>Follow Us</h4>
+                  <p>Check out our social media pages.</p>
+                  <div class="social-links d-flex">
+                     <a href="https://www.facebook.com/Hudson-Commercial-Real-Estate-Corp-111074927066980/?view_public_for=111074927066980/"><i class="bi bi-facebook"></i></a>
+                     <a href="https://twitter.com/noah15977842"><i class="bi bi-twitter-x"></i></a>
+                     <a href="https://www.instagram.com/hudson.commercial.real.estate/"><i class="bi bi-linkedin"></i></a>
+                     <a href="https://www.instagram.com/hudson.commercial.real.estate/"><i class="bi bi-instagram"></i></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container copyright text-center mt-4">
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">BizLand</strong> <span>All Rights Reserved</span></p>
+            <div class="credits">
+               <!-- All the links in the footer should remain intact. -->
+               <!-- You can delete the links only if you've purchased the pro version. -->
+               <!-- Licensing information: https://bootstrapmade.com/license/ -->
+               <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+               Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+         </div>
+      </footer>
+      <!-- Scroll Top -->
+      <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+      <!-- Preloader -->
+      <!-- Large Modal -->
+      <div class="modal fade" id="myLargeModal" tabindex="-1" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
+         <div class="modal-dialog modal-lg modal-dialog-scrollable" style="margin-top: -366.5px; margin-left: -400px; top: 50%; left: 50%; position: absolute;">
+            <!-- This is the key class -->
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="myLargeModalLabel">Property Report</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body" style="overflow: scroll;">
+                  <div class="modal-body">
+                     <!-- Carousel container -->
+                     <div id="property-carousel" class="carousel slide" data-bs-ride="carousel">
+                        <!-- Indicators/dots -->
+                        <div class="carousel-indicators">
+                           <button type="button" data-bs-target="#property-carousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+                           <button type="button" data-bs-target="#property-carousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+                           <button type="button" data-bs-target="#property-carousel" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+                        </div>
+                        <!-- Content -->
+                        <div class="carousel-inner" role="listbox">
+                           <div class="carousel-item"><img src="https://ahprd1cdn.csgpimgs.com/i2/CeH___U27_6OOO7dNR3dTCDh5ZsmYHaEdU9Uo0lATpQ/116/image.jpg" class="d-block w-100"></div>
+                           <div class="carousel-item"><img src="https://ahprd1cdn.csgpimgs.com/i2/ImwI_1AhLgUgXvNW4Z9T6J8dgHGnA-cSgDVrffLQvPA/116/image.jpg" class="d-block w-100"></div>
+                           <div class="carousel-item active"><img src="https://ahprd1cdn.csgpimgs.com/i2/SNzw0llweQvYObghaAS8Smqyy3SYS7PFJlpmCrlKXxA/116/image.jpg" class="d-block w-100"></div>
+                        </div>
+                        <!-- Left and right controls/icons -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#property-carousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#property-carousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                        </button>
+                     </div>
+                     <!-- <h4 class="" style=" margin-top: 0px; text-align: center;  background: rgb(32, 46, 64, 1.0); color: white; padding: 1em;"> 123 Main St</h4>   -->
+                     <div class="row ">
+                        <!-- Left Column: Property Description -->
+                        <div class="card me-2 ms-2">
+                           <div class="card-body">
+                              <div class="panel panel-default property-card-info">
+                                 <div class="container mt-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                       <h2 class="mb-3 mt-3 hudson-color-2 w-100 "> <span class="property-name" id="modalPropertyAddress">641 Sheafe Rd</span> </h2>
+                                       <span class="badge  text-white mt-0 pb-1 pt-2 " style="background: #dee2e6;">
+                                          <h4 class="hudson-color">Property Information</h4>
+                                       </span>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                       <!-- Left Column: Property Name & Address -->
+                                       <div class="col-md-8 mb-4 ">
+                                          <div class="d-flex align-items-center mb-3">
+                                             <div class="d-inline-flex align-items-center justify-content-center p-2 theam-background text-white rounded-3 shadow-sm me-4 mt-0" style="width: 51px; height: 51px;">
+                                                <i class="bi bi-geo-alt h3 m-0"></i>
+                                             </div>
+                                             <div>
+                                                <h5 class="mb-0 hudson-color-2">Address</h5>
+                                                <p class="mb-0 " id="modalstreetAddress">641 Sheafe Rd Poughkeepsie, NY 12601</p>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="col-md-4">
+                                          <!-- Inside the first col-md-6 div -->
+                                          <div class="d-flex align-items-center mb-3">
+                                             <div class="d-inline-flex align-items-center justify-content-center p-2 theam-background text-white rounded-3 shadow-sm me-4 mt-0" style="width: 51px; height: 51px;">
+                                                <i class="bi bi-arrows-expand h3 m-0"></i>
+                                             </div>
+                                             <div>
+                                                <h5 class="mb-0 hudson-color-2">Area</h5>
+                                                <p class="mb-0 sq-ft" id="modalMaxContiguous">2,500 SF</p>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <hr>
+                                 </div>
+                              </div>
+                              <div class="description-area">
+                                 <h4 class="property-h4-description  hudson-color-2" style="" id="modalDescription">Description</h4>
+                                 <p class="pargh-property" id="modalPropertyDescription">The property is 641 Sheafe Rd, a Warehouse building located in Fishkill Submarket. The buildings location is 641 Sheafe Rd Poughkeepsie, NY 12601. This is a Warehouse building that sits on a 5.44 AC Lot and was built in 1980. What is available to lease at this location is 2,500 SF. The max amount of space you can lease here would be 2,500 SF. The onwers are asking for rent Withheld - CoStar Est. Rent $1 (Industrial) per sq. ft.</p>
+                                 <h4 class="property-h4-description  hudson-color-2" style=" margin-top: .4em;">Property Facts</h4>
+                                 <div class="row" style="color: black;">
+                                    <div class="col-md-6">
+                                       <ul class="fa-ul list-unstyled">
+                                          <li><span class="fa-li"><i class="bi bi-check-circle hudson-color me-3"></i></span>For Lease: <span class="for-lase">Yes</span></li>
+                                          <li><span class="fa-li"><i class="bi bi-check-circle hudson-color me-3"></i></span>Zoning:  <span class="zoning" id="modalZoning">OR</span></li>
+                                          <li><span class="fa-li"><i class="bi bi-check-circle hudson-color me-3"></i></span>Price:  <span class="price" id="modalRent">Withheld</span></li>
+                                          <li><span class="fa-li"><i class="bi bi-check-circle hudson-color me-3"></i></span>Year Built: <span class="year-built" id="modalYearBuilt">1980</span></li>
+                                       </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <ul class="fa-ul list-unstyled">
+                                          <li><span class="fa-li"><i class="bi bi-check-circle hudson-color me-3"></i></span>Smallest Space: <span class="Smallest-Space" id="modalSmallestSpace">2,500 SF</span> 
+                                          </li>
+                                          <li><span class="fa-li"><i class="bi bi-check-circle hudson-color me-3"></i></span>Lease Type: <span class="lease-type" id="ModalLeaseType">641 Sheafe Rd</span></li>
+                                          <li><span class="fa-li"><i class="bi bi-check-circle hudson-color me-3"></i></span>Drive Ins: <span class="drive-ins" id="modalDriveIns">5 tot./8' w x 10' h</span> </li>
+                                          <li><span class="fa-li"><i class="bi bi-check-circle hudson-color me-3"></i></span>Land Acres <span class="land-acres" id="modalLandAcres">2.70 AC</span> </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                                 <h4 class="property-h4-description  hudson-color-2" style=" margin-top: .3em;">Location</h4>
+                                 <div class="iframe-map-div">
+                                    <div class="iframe-wrapper iframe-wrapper-4" id="iframe-wrapper-4"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3063.5856989203385!2d-73.92043009999999!3d41.633150199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89dd3943888a9257%3A0x2d242b1c44c6fe84!2s641%20Sheafe%20Rd%2C%20Poughkeepsie%2C%20NY%2012601!5e1!3m2!1sen!2sus!4v1775679401184!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn theam-background text-white" data-bs-dismiss="modal">Close Property Data</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+         <script src="assets/vendor/php-email-form/validate.js"></script>
+         <script src="assets/vendor/aos/aos.js"></script>
+         <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+         <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+         <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+         <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+         <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+         <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+         <!-- Main JS File -->
+         <script src="assets/js/main.js"></script>
+         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+         <script type="text/javascript">
+            $('#myLargeModal').on('show.bs.modal', function (event) {
+               var button = $(event.relatedTarget); // Button that triggered the modal
+               var streetAddress = button.data('street-address');
+               var maxContiguous = button.data('square-feet');
+               var yearBuilt = button.data('year-built');
+               var price = button.data('price');
+               var description = button.data('description');
+               var leaseType = button.data('lease-type');
+               var zoning = button.data('zoning');
+               var county = button.data('property-county');
+               var landAcres = button.data('land-acres');
+               var smallestSpace = button.data('smallest-space');
+               var buildingName = button.data('building-name');
+               var driveIns = button.data('drive-ins');
+               var dataModalImages = button.data('modal-images')
+               var propertyType = button.data('property-type');
+            
+               var modal = $(this);
+            
+               // Select the ul containing the image data
+               var $imageUl = $('.' + dataModalImages); // Replace 'yourImageUlId' with the actual ID of your ul
+               // Select the carousel inner container
+               var $carouselInner = $('#property-carousel .carousel-inner');
+               $carouselInner.empty();
+            
+               // Loop through each li element in the ul
+               $imageUl.find('li').each(function (index) {
+                  var imgSrc = $(this).text().trim(); // Get the text content (image src) from the li
+            
+                  // Create a new image tag and set its src
+                  var newImg = $('<img>').attr('src', imgSrc).addClass('d-block w-100');
+            
+                  // Create a new carousel item
+            
+                  var carouselItem = $('<div>').addClass('carousel-item');
+            
+                  // Set the first item as active
+                  if (index === 0) {
+                     carouselItem.addClass('active');
+                  }
+                  // Append the image to the carousel item, and the item to the carousel inner
+                  carouselItem.append(newImg);
+                  $carouselInner.append(carouselItem);
+            
+            
+               });
+            
+            
+              
+               $('.carousel').carousel();
+            
+            
+               modal.find('.price').text(price);
+               modal.find('#modalPropertyAddress').text(buildingName);
+               modal.find('#modalstreetAddress').text(streetAddress);
+               modal.find('#modalMaxContiguous').text(maxContiguous);
+               modal.find('#modalPropertyType').text(propertyType);
+               modal.find('#modalPropertyDescription').text(description);
+               modal.find('#modalLandAcre').text(landAcres);
+               modal.find('#ModalLeaseType').text(leaseType);
+               modal.find('#modalCounty').text(county);
+               modal.find('.zoning').text(zoning);
+               modal.find('#modalSmallestSpace').text(smallestSpace);
+               modal.find('#modalDriveIns').text(driveIns);
+               modal.find('.year-built').text(yearBuilt);
+               var buttonClass = button.data('property-map');
+               var $iframeContainer = $('#myLargeModal .iframe-map-div');
+               // 2. Remove all existing iframes from the container
+               $iframeContainer.empty();
+               console.log(".map-container current iframe ");
+               console.log($(".map-container " + "." + button.data('property-map')).html());
+               // Hide all iframe wrappers when modal closes // Hide all iframe wrappers when modal closes
+               console.log($('.close').data('target-class'));
+               $('.close').attr('target-class', buttonClass);
+               // 2. Remove all existing iframes from the container
+               // $iframeContainer.empty();
+               $('.modal .close').attr('data-target-class', button.data('property-map'));
+               var sourceDivContent = $('.' + button.data('property-map')).html();
+               var divContent = $(".map-container " + "." + button.data('property-map')).clone();
+               console.log(sourceDivContent);
+               console.log($('.map-container'));
+               $('.iframe-map-div').append(divContent);
+               $('.' + button.data('property-map')).show();
+            
+            });
+            
+            $('#myLargeModal').on('hidden.bs.modal', function (event) {
+               var buttonData = $('.close').data('target-class');
+               // var $iframeContainer = $('#myLargeModal .iframe-map-div');
+            
+               // 2. Remove all existing iframes from the container
+               // $iframeContainer.empty();
+            
+              
+               // Hide all iframe wrappers when modal closes // Hide all iframe wrappers when modal closes
+               console.log($('.close').data('target-class'));
+               $('.' + buttonData).hide();
+            });
+            
+            
+              
+            $('.modal').on('shown.bs.modal', function () {
+               var modalDialog = $(this).find('.modal-dialog');
+               var modalHeight = modalDialog.outerHeight();
+               $('#iframeModal').on('hidden.bs.modal', function () {
+                  $('#iframeContainer .iframe-wrapper').hide(); // Hide all iframe wrappers when modal closes
+               });
+            
+               var modalWidth = modalDialog.outerWidth();
+               modalDialog.css({
+                  'margin-top': -modalHeight / 2,
+                  'margin-left': -modalWidth / 2,
+                  'top': '50%',
+                  'left': '50%',
+                  'position': 'absolute'
+               });
+            });
+            
+            
+            // Start of add another property function
+            $(document).ready(function () {
+
+       
+            
+            
+            
+            
+            function sendEmail() {
+            // 1. Get input values
+            var name = document.getElementById("name").value;
+            var subject = document.getElementById("subject").value;
+            var message = document.getElementById("message").value;
+            var to = "sam@hudsoncommercial.com";
+            
+            // 2. Format the email body with proper spacing
+            var body = "Name: " + name + "\r\n\r\nMessage:\r\n" + message;
+            
+            // 3. Create and open the mailto link, encoding the entire body properly
+            window.location.href = "mailto:" + to + 
+            "?subject=" + encodeURIComponent(subject) + 
+            "&body=" + encodeURIComponent(body);
+            
+          
+
+
+
+            }   }); 
+            
+         </script>
+      </div>
+
+   
+  
+
+   </body>
+
+
+</html>
