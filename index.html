@@ -1013,6 +1013,7 @@
             
             
             
+          
             function sendEmail() {
             // 1. Get input values
             var name = document.getElementById("name").value;
@@ -1026,7 +1027,9 @@
             // 3. Create and open the mailto link, encoding the entire body properly
             window.location.href = "mailto:" + to + 
             "?subject=" + encodeURIComponent(subject) + 
-            "&body=" + encodeURIComponent(body);
+            
+               "&body=" + encodeURIComponent(body);
+           
             
             }    
             
