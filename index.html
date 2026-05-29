@@ -310,7 +310,8 @@
                                     </div>
                                  </li>
                               </a>
-                              <a href="" data-target-class="card-6" class="trigger">
+                            
+                              <a href="" data-target-class="card-6" class="trigger"> 
                                  <li>
                                     <i class="bi bi-building"></i>
                                     <div>
@@ -321,6 +322,7 @@
                                     </div>
                                  </li>
                               </a>
+                            
                               <a href="" data-target-class="card-5" class="trigger">
                                  <li>
                                     <i class="bi bi-building"></i>
@@ -329,6 +331,11 @@
                                        <p>The building has 5,166 SF for lease.</p>
                                     </div>
                                  </li>
+                            
+
+
+
+
                               </a>
                            </ul>
                         </div>
@@ -1013,7 +1020,6 @@
             
             
             
-          
             function sendEmail() {
             // 1. Get input values
             var name = document.getElementById("name").value;
@@ -1027,12 +1033,9 @@
             // 3. Create and open the mailto link, encoding the entire body properly
             window.location.href = "mailto:" + to + 
             "?subject=" + encodeURIComponent(subject) + 
-            
-               "&body=" + encodeURIComponent(body);
-           
+            "&body=" + encodeURIComponent(body);
             
             }    
-            
             
             
             
@@ -1069,14 +1072,14 @@
             
             // Send the specific card to your function
             if (targetDiv) {
-            sendPropertyPage(targetDiv);
+            sendPropertyDetails(targetDiv);
             }
             });
             });
             
             
             
-            function sendProperty(cardElement) {
+            function sendPropertyDetails(cardElement) {
             const params = new URLSearchParams();
             
             
@@ -1168,13 +1171,16 @@
             
             // 4. Send to Information Page
             window.location.href = `property-info.html?${params.toString()}`;
+           
+            
             }
             
             
             
             
             
-      
+            
+     
        </script>
       </div>
    </body>
